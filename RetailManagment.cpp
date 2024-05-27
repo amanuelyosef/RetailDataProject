@@ -5,11 +5,11 @@
 
 using namespace std;
 
-string server = "DESKTOP-29SAKCH\\SQLEXPRESS"; 
+string server = "DESKTOP-29SAKCH\\SQLEXPRESS";
 string database = "RETAL_DATABASE";
 string username = "sa";
 string password = "29211212";
-string sqlQuery = "SELECT * FROM Customer"; 
+string sqlQuery = "SELECT * FROM Customer";
 string connStr = "sqlcmd -S " + server + " -d " + database + " -U " + username + " -P " + password;
 
 struct customer
@@ -32,17 +32,23 @@ struct Product
     string description;
 };
 
-struct Transaction {
+struct Transaction
+{
     int customerId;
     int productId;
     int transactionId;
     int amount;
-    int date; 
+    int date;
 };
-
 
 void updateQuantity()
 {
+    system("cls");
+
+    cout << "============================================" << endl;
+    cout << "              UPDATE QUANTITY                " << endl;
+    cout << "============================================" << endl;
+    cout << "";
     string pname;
     int q;
     cout << "Enter name of new bought product" << endl;
@@ -57,6 +63,10 @@ void updateQuantity()
 
 void updatePrice()
 {
+    system("cls");
+    cout << "============================================" << endl;
+    cout << "              UPDATE PRICE                   " << endl;
+    cout << "============================================" << endl;
     string pname;
     int np;
     cout << "Enter name of product you want to update the price: " << endl;
@@ -71,6 +81,10 @@ void updatePrice()
 
 void transactionRecord()
 {
+    system("cls");
+    cout << "============================================" << endl;
+    cout << "              RECORD TRANSACTION             " << endl;
+    cout << "============================================" << endl;
 
     string pname;
     int cid;
@@ -86,7 +100,8 @@ void transactionRecord()
 
     string transact = connStr + " -Q \"insert into [transaction] (productid, customerid, amount) values ((select productid from product where [name] = '" + pname + "'), " + to_string(cid) + ", " + to_string(amount) + ")\"";
 
-    string update = connStr + " -Q \"update product set quantity = quantity - " + to_string(amount) + "where name = '" + pname + "'""\"";
+    string update = connStr + " -Q \"update product set quantity = quantity - " + to_string(amount) + "where name = '" + pname + "'"
+                                                                                                                                 "\"";
 
     system(transact.c_str());
     system(update.c_str());
@@ -94,6 +109,10 @@ void transactionRecord()
 
 void InsertProduct()
 {
+    system("cls");
+    cout << "============================================" << endl;
+    cout << "              INSERT PRODUCT                 " << endl;
+    cout << "============================================" << endl;
     Product products;
     cout << "Insert product Information" << endl;
     cout << "Product Name ";
@@ -111,7 +130,7 @@ void InsertProduct()
     getline(cin, products.description);
 
     string add = connStr + " -Q \"INSERT INTO Product (name, catalogue , cost, price, quantity,description) VALUES ( " + "'" + products.name + "'," + "'" + products.catalogue + "'," + to_string(products.cost) + "," + to_string(products.price) + "," + to_string(products.quantity) + ", '" + products.description + "'"
- ")\"";
+                                                                                                                                                                                                                                                                                                                         ")\"";
 
     system(add.c_str());
 
@@ -120,6 +139,11 @@ void InsertProduct()
 
 void InsertCustomer()
 {
+    system("color 0F");
+    system("cls");
+    cout << "============================================" << endl;
+    cout << "         INSERT CUSTOMER INFORMATION         " << endl;
+    cout << "============================================" << endl;
     customer custinfo;
     cout << "Enter your customer information here:  " << endl;
     cout << "Enter first name : ";
@@ -132,8 +156,8 @@ void InsertCustomer()
     cout << "Enter phone number : ";
     cin >> custinfo.phone;
 
-
-    string custom = connStr + " -Q \"INSERT INTO Customer ( firstName,  lastName, [location],phone) VALUES ( " + "'" + custinfo.firstname + "'," + "'" + custinfo.lastname + "'," + "'" + custinfo.location + "'," + "'" + custinfo.phone + "'"")\"";
+    string custom = connStr + " -Q \"INSERT INTO Customer ( firstName,  lastName, [location],phone) VALUES ( " + "'" + custinfo.firstname + "'," + "'" + custinfo.lastname + "'," + "'" + custinfo.location + "'," + "'" + custinfo.phone + "'"
+                                                                                                                                                                                                                                            ")\"";
 
     system(custom.c_str());
 
@@ -164,85 +188,158 @@ void compute()
     system(pts.c_str());
 }
 
-
-
 int main()
 {
+    system("color 0A");
     int ans;
+    cout << "============================================================" << endl;
+    cout << "           WELCOME TO  OUR DATA MANAGEMENT SYSTEM            " << endl;
+    cout << "============================================================\n"
+         << endl;
+label:
 
-    cout<<"welcome to our Data management system"<<endl;
-  label:
-    cout<<"1) Display inforamtion on the database"<<endl;
-    cout<<"2) Insert information"<<endl;
-    cout<<"3) Update data"<<endl;
+    cout << "======================================================" << endl;
+    cout << "===========            MAIN MENU        ==============\n"
+         << endl;
+    cout << "          1. Display information on the database" << endl;
+    cout << "          2. Insert information" << endl;
+    cout << "          3. Update data\n"
+         << endl;
+    cout << "=====================================================" << endl;
+    cout << "=====================================================" << endl;
 
-    cout<<"Enter your choice: "<<endl;
-    cin>>ans;
+    cout << "          Enter your choice: ";
+    cin >> ans;
 
-    if(ans==1){
-        cout<<"1)Display information about sales"<<endl;
-        cout<<"2)Display Employee information"<<endl;
-        cout<<"3)Display Customer information"<<endl;
-        cout<<"4)Display Product information"<<endl;
-        cout<<"5)Back To Main "<<endl;
-        cout<<"Enter your choice: "<<endl;
-        cin>>ans;
+    if (ans == 1)
+    {
+    D:
+        system("cls");
+        cout << "================================================" << endl;
+        cout << "      Display information on the database\n";
+        cout << "================================================" << endl;
+        cout << "        1. Display information about sales" << endl;
+        cout << "        2. Display Employee information" << endl;
+        cout << "        3. Display Customer information" << endl;
+        cout << "        4. Display Product information" << endl;
+        cout << "        5. Back To Main" << endl;
+        cout << "================================================" << endl;
+        cout << "================================================\n"
+             << endl;
 
-        if(ans==1){
+        cout << "        Enter your choice: ";
+        cin >> ans;
+
+        if (ans == 1)
+        {
             compute();
-
-        }else if(ans==2){
+        }
+        else if (ans == 2)
+        {
             EmployeeInformation();
-            
-        }else if(ans==3){
+        }
+        else if (ans == 3)
+        {
             customerInformation();
-            
-        }else if(ans==4){
+        }
+        else if (ans == 4)
+        {
             productInformation();
-        }else if(ans==5){
+        }
+        else if (ans == 5)
+        {
+            system("cls");
             goto label;
         }
-        else{
-            cout<<"Invalid input"<<endl;
-        }
-    }else if(ans==2){
-        cout<<"1) New customer inforamtion"<<endl;
-        cout<<"2) New product inforamtion"<<endl;
-        cout<<"3) Order"<<endl;
-        cout<<"4) Main Menu "<<endl;
-
-        cout<<"Enter your choice: "<<endl;
-        cin>>ans;
-
-        if(ans==1){
-            InsertCustomer();
-        }else if(ans==2){
-            InsertProduct();
-        }else if(ans==3){
-            transactionRecord();
-        
-        }else if(ans==4){
-            goto label;
-        }
-        else{
-            cout<<"Invalid input"<<endl;
-        }
-    }else if(ans==3){
-        cout<<"1) Update product price"<<endl;
-        cout<<"2) New added product"<<endl;
-        
-        cout<<"Enter your choice: "<<endl;
-        cin>>ans;
-
-        if(ans==1){
-            updatePrice();
-        }else if(ans==2){
-            updateQuantity();
-        }else{
-            cout<<"Invalid input"<<endl;
+        else
+        {
+            cout << "Invalid input" << endl;
+            goto D;
         }
     }
-    
+    else if (ans == 2)
+    {
+    I:
+        system("cls");
+        cout << "============================================" << endl;
+        cout << "            Insert information             \n";
+        cout << "============================================" << endl;
+        cout << "        1. New customer information" << endl;
+        cout << "        2. New product information" << endl;
+        cout << "        3. Order" << endl;
+        cout << "        4. Main Menu " << endl;
+        cout << "============================================" << endl;
+        cout << "============================================\n"
+             << endl;
+        cout << "Enter your choice : ";
+        cin >> ans;
+
+        if (ans == 1)
+        {
+            InsertCustomer();
+        }
+        else if (ans == 2)
+        {
+            InsertProduct();
+        }
+        else if (ans == 3)
+        {
+            transactionRecord();
+        }
+        else if (ans == 4)
+        {
+            system("cls");
+            goto label;
+        }
+        else
+        {
+            cout << "Invalid input" << endl;
+            goto I;
+        }
+    }
+    else if (ans == 3)
+    {
+    p:
+        system("cls");
+        cout << "======================================================" << endl;
+        cout << "                      UPDATE DATA                     " << endl;
+        cout << "======================================================" << endl;
+
+        cout << "        1. Update product price" << endl;
+        cout << "        2. New added product" << endl;
+        cout << "        3. Main Menu \n"
+             << endl;
+        cout << "=====================================================" << endl;
+        cout << "======================================================\n"
+             << endl;
+        cout << "         Enter your choice: ";
+        cin >> ans;
+
+        if (ans == 1)
+        {
+            updatePrice();
+        }
+        else if (ans == 2)
+        {
+            updateQuantity();
+        }
+        else if (ans == 3)
+        {
+            system("cls");
+            goto label;
+        }
+        else
+        {
+            cout << "Invalid input" << endl;
+            goto p;
+        }
+    }
+    else
+    {
+        cout << "Invalid input" << endl;
+        system("cls");
+        goto label;
+    }
 
     return 0;
 }
