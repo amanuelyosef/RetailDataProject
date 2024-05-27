@@ -190,6 +190,9 @@ void compute()
 
 int main()
 {
+    char ch;
+    bool check=false;
+
     system("color 0A");
     int ans;
     cout << "============================================================" << endl;
@@ -251,6 +254,10 @@ label:
             system("cls");
             goto label;
         }
+        else if (ans == 0)
+        {
+            exit(0);
+        }
         else
         {
             cout << "Invalid input" << endl;
@@ -276,20 +283,43 @@ label:
 
         if (ans == 1)
         {
-            InsertCustomer();
+            while(check){
+                InsertCustomer();
+                cout<<"Want to add another data?:";
+                cin>>ch;
+                if (ch=='y') check=true;
+                else check=false;
+            }
+
         }
         else if (ans == 2)
         {
-            InsertProduct();
+            while(check){
+                InsertProduct();
+                cout<<"Want to add another data?:";
+                cin>>ch;
+                if (ch=='y') check=true;
+                else check=false;
+            }
         }
         else if (ans == 3)
         {
-            transactionRecord();
+            while(check){
+                transactionRecord();
+                cout<<"Want to add another record?:";
+                cin>>ch;
+                if (ch=='y') check=true;
+                else check=false;
+            }
         }
         else if (ans == 4)
         {
             system("cls");
             goto label;
+        }
+        else if (ans == 0)
+        {
+            exit(0);
         }
         else
         {
@@ -317,16 +347,33 @@ label:
 
         if (ans == 1)
         {
-            updatePrice();
+            while(check){
+                updatePrice();
+                cout<<"Want to add another record?:";
+                cin>>ch;
+                if (ch=='y') check=true;
+                else check=false;
+            }
+            
         }
         else if (ans == 2)
         {
-            updateQuantity();
+            while(check){
+                updateQuantity();
+                cout<<"Want to add another record?:";
+                cin>>ch;
+                if (ch=='y') check=true;
+                else check=false;
+            }
         }
         else if (ans == 3)
         {
             system("cls");
             goto label;
+        }
+        else if (ans == 0)
+        {
+            exit(0);
         }
         else
         {
@@ -334,6 +381,10 @@ label:
             goto p;
         }
     }
+    else if (ans == 0)
+        {
+            exit(0);
+        }
     else
     {
         cout << "Invalid input" << endl;
