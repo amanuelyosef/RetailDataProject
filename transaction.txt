@@ -1,0 +1,9 @@
+		 Transaction Information
+------------------------------------------------------
+Customer ID : 7
+Product ID : 2
+Transaction ID : -1738541799
+Amount : 1798
+Date : 26/5/2024
+Location : Harar
+------------------------------------------------------

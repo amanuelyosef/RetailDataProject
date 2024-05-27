@@ -1,0 +1,68 @@
+		customer Information
+------------------------------------------------------
+Customer ID: 1
+First Name: John
+Last Name: Smith
+Location: Addis Ababa
+Phone Number: +251912345678
+------------------------------------------------------
+Customer ID: 2
+First Name: Sarah
+Last Name: Johnson
+Location: Dire Dawa
+Phone Number: +251911234567
+------------------------------------------------------
+Customer ID: 3
+First Name: Mohammed
+Last Name: Ahmed
+Location: Bahir Dar
+Phone Number: +251925984835
+------------------------------------------------------
+Customer ID: 4
+First Name: Anna
+Last Name: Wilson
+Location: Gondar
+Phone Number: +251913256748
+------------------------------------------------------
+Customer ID: 5
+First Name: Daniel
+Last Name: Tesfaye
+Location: Hawassa
+Phone Number: +251948689233
+------------------------------------------------------
+Customer ID: 6
+First Name: Helen
+Last Name: Jones
+Location: Mekelle
+Phone Number: +251906982516
+------------------------------------------------------
+Customer ID: 7
+First Name: Michael
+Last Name: Brown
+Location: Harar
+Phone Number: +251945352685
+------------------------------------------------------
+Customer ID: 8
+First Name: Elizabeth
+Last Name: Davis
+Location: Jimma
+Phone Number: +251910652533
+------------------------------------------------------
+Customer ID: 9
+First Name: David
+Last Name: Garcia
+Location: adama
+Phone Number: +251911251012
+------------------------------------------------------
+Customer ID: 10
+First Name: Maria
+Last Name: Rodriguez
+Location: Axum
+Phone Number: +251978988899
+------------------------------------------------------
+Customer ID: 0
+First Name: 
+Last Name: 
+Location: 
+Phone Number: +251
+------------------------------------------------------

@@ -1,0 +1,82 @@
+		Product Information
+------------------------------------------------------
+product ID : 1
+Name : Laptop
+Catalogue : 600
+Cost : 600
+Price : 899
+Quantity : 50
+Discription : High-performance laptop with Intel i7 processor.
+------------------------------------------------------
+product ID : 2
+Name : Smartphone
+Catalogue : 300
+Cost : 300
+Price : 499
+Quantity : 100
+Discription : Latest model with 5G connectivity and dual cameras.
+------------------------------------------------------
+product ID : 3
+Name : Running Shoes
+Catalogue : 50
+Cost : 50
+Price : 99
+Quantity : 200
+Discription : Lightweight shoes designed for running enthusiasts.
+------------------------------------------------------
+product ID : 4
+Name : Yoga Mat
+Catalogue : 20
+Cost : 20
+Price : 35
+Quantity : 1050
+Discription : Non-slip surface, eco-friendly material.
+------------------------------------------------------
+product ID : 5
+Name : Coffee Maker
+Catalogue : 80
+Cost : 80
+Price : 129
+Quantity : 80
+Discription : Programmable machine for brewing coffee.
+------------------------------------------------------
+product ID : 6
+Name : Backpack
+Catalogue : 40
+Cost : 40
+Price : 69
+Quantity : 120
+Discription : Durable backpack with multiple compartments.
+------------------------------------------------------
+product ID : 7
+Name : Smart Watch
+Catalogue : 150
+Cost : 150
+Price : 249
+Quantity : 90
+Discription : Fitness tracking features and smartphone connectivity.
+------------------------------------------------------
+product ID : 8
+Name : Blender
+Catalogue : 50
+Cost : 50
+Price : 89
+Quantity : 70
+Discription : High-speed blender for smoothies and shakes.
+------------------------------------------------------
+product ID : 9
+Name : Wireless
+Catalogue : 100
+Cost : 100
+Price : 179
+Quantity : 110
+Discription : Noise-canceling headphones with Bluetooth connectivity.
+------------------------------------------------------
+product ID : 10
+Name : Leather Wallet Fashion
+Catalogue : 30
+Cost : 30
+Price : 49
+Quantity : 180
+Discription : Genuine leather wallet with RFID protection.
+------------------------------------------------------
